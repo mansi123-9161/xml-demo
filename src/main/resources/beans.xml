@@ -4,11 +4,29 @@
        xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
     <bean id="actor" class="com.stackroute.Actor">
-        <property name="name" value="ranveer"></property>
-        <property name="age" value="34"></property>
-        <property name="gender" value="male"></property>
+        <constructor-arg name="name" value="ranveer"></constructor-arg>
+        <constructor-arg name="age" value="34"></constructor-arg>
+        <constructor-arg name="gender" value="male"></constructor-arg>
+    </bean>
+    <bean id="actor1" class="com.stackroute.Actor">
+        <constructor-arg name="name" value="actor2"></constructor-arg>
+        <constructor-arg name="age" value="34"></constructor-arg>
+        <constructor-arg name="gender" value="male"></constructor-arg>
+    </bean>
+    <bean id="actor2" class="com.stackroute.Actor">
+        <constructor-arg name="name" value="actor3"></constructor-arg>
+        <constructor-arg name="age" value="34"></constructor-arg>
+        <constructor-arg name="gender" value="male"></constructor-arg>
     </bean>
     <bean id="movie" class="com.stackroute.Movie">
-        <property name="actor" ref="actor"></property>
+        <!--name actor is from property of movie and refering to actor object-->
+
+        <property name="actor" >
+                <list>
+            <ref bean="actor"></ref>
+                    <ref bean="actor1"></ref>
+                    <ref bean="actor2"></ref>
+                </list>
+        </property>
     </bean>
 </beans>

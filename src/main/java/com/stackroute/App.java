@@ -6,17 +6,15 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.core.io.ClassPathResource;
 
+
 import static java.lang.System.*;
 
-/**
- * Hello world!
- *
- */
 public class App 
 {
     public static void main( String[] args )
     {
-        ApplicationContext applicationContext=new ClassPathXmlApplicationContext("beans.xml");
+        ApplicationContext applicationContext;
+        applicationContext = new ClassPathXmlApplicationContext("beans.xml");
         Movie movie=  applicationContext.getBean("movie",Movie.class);
         out.println( movie.getActor());
 

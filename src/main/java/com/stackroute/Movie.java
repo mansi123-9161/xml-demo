@@ -1,15 +1,17 @@
 package com.stackroute;
 
-public class Movie {
-    Actor actor;
+import java.util.List;
 
-    public Actor getActor() {
+public class Movie {
+    List<Actor> actor;
+
+    public List<Actor> getActor() {
         return actor;
     }
 
-//    public void setActor(Actor actor) {
-//        this.actor = actor;
-//    }
+   public void setActor(List<Actor> actor) {
+       this.actor = actor;
+    }
 
     @Override
     public String toString() {
