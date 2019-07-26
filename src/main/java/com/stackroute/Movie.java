@@ -9,8 +9,8 @@ public class Movie {
         return actor;
     }
 
-   public void setActor(List<Actor> actor) {
-       this.actor = actor;
+    public void setActor(List<Actor> actor) {
+        this.actor = actor;
     }
 
     @Override
@@ -19,5 +19,4 @@ public class Movie {
                 "actor=" + actor +
                 '}';
     }
-    //Hello Please delete this,hahahah
 }
