@@ -18,7 +18,7 @@
         <constructor-arg name="age" value="34"></constructor-arg>
         <constructor-arg name="gender" value="male"></constructor-arg>
     </bean>
-    <bean id="movie" class="com.stackroute.Movie">
+    <bean id="movie1" class="com.stackroute.Movie">
         <!--name actor is from property of movie and refering to actor object-->
 
         <property name="actor" >
@@ -28,5 +28,19 @@
                     <ref bean="actor2"></ref>
                 </list>
         </property>
+
     </bean>
+    <bean id="movie2" class="com.stackroute.Movie">
+        <!--name actor is from property of movie and refering to actor object-->
+
+        <property name="actor" >
+            <list>
+                <ref bean="actor"></ref>
+                <ref bean="actor1"></ref>
+                <ref bean="actor2"></ref>
+            </list>
+        </property>
+
+    </bean>
+
 </beans>
