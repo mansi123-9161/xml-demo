@@ -17,7 +17,7 @@ public class App
 {
     public static void main( String[] args )
     {
-        ApplicationContext applicationContext;
+        ClassPathXmlApplicationContext applicationContext;
         applicationContext = new ClassPathXmlApplicationContext("beans.xml");
         Movie movie1=  applicationContext.getBean("movie1",Movie.class);
         out.println( movie1.getActor());
@@ -26,7 +26,10 @@ public class App
          out.println( movie2.getActor());
         out.println(movie1==movie2);
 
-//        XmlBeanFactory value;
+        applicationContext.registerShutdownHook();
+
+
+        //        XmlBeanFactory value;
 //        value = new XmlBeanFactory(new ClassPathResource("beans.xml"));
 //        Movie movie1=value.getBean("movie",Movie.class);
 //        out.println(movie1.getActor());

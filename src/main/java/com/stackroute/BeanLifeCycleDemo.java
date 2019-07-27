@@ -14,10 +14,13 @@ public class BeanLifeCycleDemo implements InitializingBean, DisposableBean {
         System.out.println("destroying bean");
     }
     //customDistroy method did not execue here after 2nd phase of question
-    public void customInit(){
+    public void customInit()
+    {
         System.out.println("Custom Bean Initialization method ... ");
     }
-    public void customDestroy(){
+    public void customDestroy()
+    {
+
         System.out.println("Custom Bean Destroy method ... ");
     }
 
