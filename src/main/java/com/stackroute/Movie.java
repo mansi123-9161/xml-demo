@@ -13,6 +13,9 @@ public class Movie {
         return actor;
     }
 
+    public Movie() {
+    }
+
     public void setActor(List<Actor> actor) {
         this.actor = actor;
     }
