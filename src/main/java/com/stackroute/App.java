@@ -22,7 +22,7 @@ public class App
         Movie movie1=  applicationContext.getBean("movie1",Movie.class);
         out.println( movie1.getActor());
 
-       Movie movie2=  applicationContext.getBean("movie1",Movie.class);
+       Movie movie2=  applicationContext.getBean("movie2",Movie.class);
          out.println( movie2.getActor());
         out.println(movie1==movie2);
 
