@@ -18,28 +18,29 @@
         <constructor-arg name="age" value="34"></constructor-arg>
         <constructor-arg name="gender" value="male"></constructor-arg>
     </bean>
-    <bean name="movie1" class="com.stackroute.Movie">
+    <!--by defining scope as prototype we create new instance of bean every time-->
+    <bean name="movie1" class="com.stackroute.Movie" scope="prototype">
         <!--name actor is from property of movie and refering to actor object-->
 
-        <property name="actor" >
+        <constructor-arg name="actor" >
                 <list>
             <ref bean="actor"></ref>
                     <ref bean="actor1"></ref>
                     <ref bean="actor2"></ref>
                 </list>
-        </property>
+        </constructor-arg>
 
     </bean>
     <bean name="movie2" class="com.stackroute.Movie">
         <!--name actor is from property of movie and refering to actor object-->
 
-        <property name="actor" >
+        <constructor-arg name="actor" >
             <list>
                 <ref bean="actor"></ref>
                 <ref bean="actor1"></ref>
                 <ref bean="actor2"></ref>
             </list>
-        </property>
+        </constructor-arg>
 
     </bean>
 
