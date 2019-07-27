@@ -25,5 +25,7 @@
     <bean id="movie2" class="com.stackroute.Movie" scope="prototype" autowire="constructor">
         <!--name actor is from property of movie and refering to actor object-->
     </bean>
+    <bean id="beanLifeCycleDemo" class="com.stackroute.BeanLifeCycleDemo" init-method="customInit" destroy-method="customDestroy">
 
+    </bean>
 </beans>
